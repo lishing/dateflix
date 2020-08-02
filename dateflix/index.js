@@ -1,16 +1,19 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors");
 require("dotenv").config();
 
 const app = express();
 
 // Middleware
 app.use(express.json()); // json body parser 
-// app.use(cors());
+app.use(cors());
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 
+app.get("/status", (req,res) => res.status(200).json({status: "deployed on heroku"}) )
 app.listen(PORT, () => console.log(`The server has started on port: ${PORT}`));
+
 
 // Set up Mongoose
 mongoose.connect(
