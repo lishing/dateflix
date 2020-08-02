@@ -14,9 +14,6 @@ const PORT = process.env.PORT || 3000;
 
 //test if it's deployed on heroku/port
 app.get("/status", (req,res) => res.status(200).json({status: "deployed on heroku"}) )
-app.listen(PORT, () => console.log(`The server has started on port: ${PORT}`));
-
-
 
 // Set up Mongoose
 mongoose.connect(
@@ -33,3 +30,7 @@ mongoose.connect(
 
 // Set up routes
 app.use("/users", require("./routes/userRouter"));
+
+app.listen(PORT, () => {
+    console.log(`The server has started on port: ${PORT}`)
+});
