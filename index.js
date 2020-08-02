@@ -9,8 +9,7 @@ app.use(express.json()); // json body parser
 // app.use(cors());
 
 const PORT = process.env.PORT || 5000;
-
-app.listen(PORT, () => console.log(`The server has started on port: ${PORT}`));
+app.get("/status", (req,res) => res.status(200).json({status: "deployed on heroku"}));
 
 // Set up Mongoose
 mongoose.connect(
@@ -27,3 +26,5 @@ mongoose.connect(
 
 // Set up routes
 app.use("/users", require("./src/routes/userRouter"));
+
+app.listen(PORT, () => console.log(`The server has started on port: ${PORT}`));
