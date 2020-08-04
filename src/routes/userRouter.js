@@ -38,8 +38,8 @@ router.post("/register", async (req, res) => {
     }
 });
 
-router.post("/login", asyn (req,res) =>{
+// router.post("/login", asyn (req,res) =>{
     
-})
+// })
 
 module.exports = router;
