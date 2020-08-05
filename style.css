@@ -1,9 +1,11 @@
 html {
-    background-color: #ff9999;
+    background-color: #ffeecc;
 }
 
 body {
     background-color: #ffffff;
+    min-height: 100%;
+    width: 960px;
     margin: 0px;
     padding: 0;
     line-height: 1.6em;
@@ -34,4 +36,21 @@ body {
 	text-decoration: none;
 	color: black;
 } 
+
+/* footer */
+#footer {
+	clear: both;
+	width: 940px;
+    padding: 20px 0px 20px 0;
+    position: relative;
+	text-align: center;
+	/* border-top: 1px solid #ffffff; */
+	color: black;
+    background-color: #ffffff;
+}
+
+#footer a{
+	color: #000000;
+	font-weight: normal;
+}
 
