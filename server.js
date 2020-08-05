@@ -25,7 +25,7 @@ app.get("/status", (req,res) => res.status(200).json({status: "deployed on herok
 // );
 
 // Set up routes
-app.get("/users", require("./src/routes/userRouter"));
+app.get("/users", require("./src/controllers/userRouter"));
 
 app.listen(PORT, () => console.log(`The server has started on port: ${PORT}`));
 
