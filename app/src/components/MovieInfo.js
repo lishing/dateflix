@@ -13,4 +13,4 @@ class MovieInfo extends React.Component {
     }
 }
   
-  export default MovieInfo;
+export default MovieInfo;
