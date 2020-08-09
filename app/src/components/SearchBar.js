@@ -1,6 +1,7 @@
 import React from 'react';
+import MovieInfo from './MovieInfo.js'
 
-class OMDBQueryForm extends React.Component {
+class SearchBar extends React.Component {
     // to uncomment when it's fixed, with API key
     // constructor (props) {
     //   super(props)
@@ -35,7 +36,7 @@ class OMDBQueryForm extends React.Component {
     // }
     render () {
       return (
-        <React.Fragment>
+        <div>
           <form onSubmit={this.handleSubmit}>
             <label for='movieTitle'>Title</label>
             <input
@@ -53,46 +54,9 @@ class OMDBQueryForm extends React.Component {
             ? <MovieInfo movie={this.state.movie} />
             : ''
           }
-        </React.Fragment>
+        </div>
       )
     }
   }
-
-// const Movie = (props) =>{
-//     return(
-//         <label htmlFor="search">Search by movie</label>
-//         <input type="text" value={props.inputValue} onChange={props.moveFilderOnChange}/>
-        
-//     )
-// }
-
-// class MovieList extends React.Component {
-//     constructor() {
-//         super();
-//         this.state = {
-//             search: 'Put your movie search here'
-//         };
-//     }
-//     updateSearch (event){
-//         this.setState({search: event.target.value.substr(0, 20)});
-//     }
-//     render (){
-//         let filteredMovies = this.props.movies.filter(
-//             (movies) => { 
-//                 return movie.title.indexOf(this.state.search) !== -1; 
-//             }
-//         )
-//         return(
-//             <div>
-//                 <ul>
-//                     {filteredMovies.props.MovieList.map((movie)=>{
-//                         return <Movies movie={movie} key ={movie.id}/>
-//                     })}
-//                 </ul>
-//                 <input type="text" value={this.state.search}></input>
-//             </div>
-//         )
-//     }
-// }
 
 export default SearchBar;
