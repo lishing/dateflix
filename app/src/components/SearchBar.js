@@ -1,13 +1,14 @@
 import React from 'react';
 import MovieInfo from './MovieInfo.js'
+import FormControl from 'react-bootstrap/FormControl';
+import Button from 'react-bootstrap/Button';
 
 class SearchBar extends React.Component {
-    // to uncomment when it's fixed, with API key
     // constructor (props) {
     //   super(props)
     //   this.state = {
     //     baseURL: 'http://www.omdbapi.com/?',
-    //     //apikey: 'apikey=' + '98e3fb1f',
+    //     apikey: 'apikey=' + '53ab0f24',
     //     query: '&t=',
     //     movieTitle: '',
     //     searchURL: '',
@@ -38,7 +39,9 @@ class SearchBar extends React.Component {
       return (
         <div>
           <form onSubmit={this.handleSubmit}>
-            <label for='movieTitle'>Title</label>
+            <FormControl id='movieTitle' type="text" placeholder="Search" className="mr-sm-2" value={this.state.movieTitle}
+              onChange={this.handleChange} />
+            <label for='movieTitle'></label> 
             <input
               id='movieTitle'
               type='text'
@@ -49,6 +52,7 @@ class SearchBar extends React.Component {
               type='submit'
               value='Find Movie Info'
             />
+            <Button variant="outline-info">Search</Button>
           </form>
           {(this.state.movie)
             ? <MovieInfo movie={this.state.movie} />

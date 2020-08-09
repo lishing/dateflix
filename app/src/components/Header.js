@@ -4,6 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
+import SearchBar from './SearchBar';
 
 class Header extends React.Component {
     render (){
@@ -15,10 +16,6 @@ class Header extends React.Component {
                 <Nav.Link href="#profile">Profile</Nav.Link>
                 <Nav.Link href="#profile">Explore</Nav.Link>
             </Nav>
-            <Form inline>
-                <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                <Button variant="outline-info">Search</Button>
-            </Form>
             </Navbar>
         )
     }
