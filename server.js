@@ -28,3 +28,4 @@ app.get("/status", (req,res) => res.status(200).json({status: "deployed on herok
 app.get("/users", require("./src/controllers/userRouter"));
 
 app.listen(PORT, () => console.log(`The server has started on port: ${PORT}`));
+
